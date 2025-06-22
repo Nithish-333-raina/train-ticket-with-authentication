@@ -1,0 +1,60 @@
+
+    body {
+      background-image: url(image);
+      margin: 0;
+      font-family: sans-serif;
+    }
+    .container {
+      top: 50%;
+      left: 50%;
+      height: 300px;
+      width: 330px;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      background-color: rgb(50,50,50);
+      border-radius: 20px;
+    }
+    .card {
+      padding: 60px 40px 50px 40px;
+      color: white;
+    }
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      border: none;
+      background: transparent;
+      border-bottom: 1px solid black;
+      padding: 10px;
+      margin-bottom: 5px;
+      outline: none;
+      color: white;
+    }
+    #login {
+      width: 80%;
+      padding: 10px;
+      margin-left: 13%;
+      margin-top: 20px;
+      background-color: darkblue;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 0.8rem;
+    }
+    .image{
+      margin-top: -30px;
+    }
+    #login:hover {
+      background-color: white;
+      color: black;
+    }
+    
+    .insta {
+      margin-top: 30px;
+      text-align: center;
+    }
+    .insta a {
+      color: white;
+      text-decoration: none; 
+    }
+  

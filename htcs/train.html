@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TICKET</title>
+    <style>
+      body{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        align-items: center;
+        background: linear-gradient(to left,grey,skyblue);
+      }
+      .form-id{
+        background-color: white;
+        border-radius: 5px;
+        padding: 18px;
+      }
+      .button input[type="submit"]{
+        background-color:green;
+        color: white;
+         border-radius: 5px;
+        cursor: pointer;
+      }
+       .button input[type="reset"]{
+        background-color: red;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .button{
+        padding-top: 15px;
+        text-align:center;
+
+      }
+      input[type="text"],
+      input[type="email"],
+      select{
+        width: 100%;
+      }
+    
+    </style>
+</head>
+<body class="body">
+    <div class="form-id">
+    <form >
+            <h1>Happy journey</h1>
+            
+            <label for="NAME">NAME</label><br>
+            <input type="text" id="name" placeholder="ENTER YOUR NAME" name="NAME"><br> 
+
+            <label for="MAIL">MAIL</label><br>
+            <input type="email" id="email" placeholder="ENTER YOUR mail id" name="MAIL">
+            <br>
+
+
+            <label for="gender">GENDER</label>
+            <label><input type="checkbox" name="gender">male</label>
+            <label><input type="checkbox" name="gender">female</label>
+                <br>
+
+            <label for="DESTINATION">DESTINATION</label><br>
+            <select id="destination">
+                <option value="">select destination</option>
+                <option value="chennai">chennai</option>
+                <option value="munbai">mumbai</option>
+                <option value="bangaluru">bangaluru</option>
+                <option value="delhi">delhi</option>
+                <option value="goa">goa</option>
+            </select>
+            <br>
+            <div class="button">
+            <input type="submit">
+            <input type="reset">
+            </div>
+            
+    </form>
+    </div>
+<script>
+  document.querySelector("form").addEventListener("submit", function(e) {
+    e.preventDefault(); // prevent real form submission (no page reload)
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const gender = document.querySelector('input[name="gender"]:checked');
+    const destination = document.getElementById("destination").value;
+
+    if (!name || !email || !gender || !destination) {
+      alert("Please fill in all the fields.");
+      return;
+    }
+
+    alert("Ticket booked successfully!\n" +
+      "Name: " + name +
+      "\nEmail: " + email +
+      "\nGender: " + gender.value +
+      "\nDestination: " + destination);
+    
+  });
+    </script>
+</body>
+</html>
